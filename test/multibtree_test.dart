@@ -5,7 +5,7 @@ import 'package:multibtree/multibtree.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('Test MultiBTree', () {
     setUp(() {});
 
     test('Insert', () {

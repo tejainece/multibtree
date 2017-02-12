@@ -94,6 +94,7 @@ class MultiBTree<T extends Comparable, VT> {
     final Pair<T, VT> found = _root.find(key);
     if(found == null) return false;
     found.value.remove(val);
+    if(found.value.length == 0) removeAll(key);
     return true;
   }
 
@@ -110,14 +111,14 @@ class MultiBTree<T extends Comparable, VT> {
     if (out != null) {
       _length--;
     }
-    return out?.value;
+    return out?.value?.toSet();
   }
 
   /// Looks for the key item in the tree, returning it. It returns `null` if
   /// unable to find that item.
   Set<VT> operator [](T key) {
     if (_root == null) return null;
-    return _root[key];
+    return _root[key]?.toSet();
   }
 
   /// Calls the iterator for every value in the tree within the range

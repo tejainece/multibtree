@@ -1,6 +1,6 @@
 name: multibtree
 description: Multi value BTree implementation for Dart
-version: 0.0.2
+version: 0.0.3
 author: Ravi Teja Gudapati <tejainece@gmail.com>
 homepage: https://github.com/Jaguar-dart/jaguar_docstore
 
